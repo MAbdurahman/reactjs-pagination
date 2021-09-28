@@ -225,12 +225,12 @@ small,
           main
 ================================================*/
 div.loading {
-  width: 100%;
+	width: 100%;
 	text-align: center;
 	margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5rem;
 }
 
 section.loading-circle {
@@ -317,7 +317,8 @@ section.loading-circle {
 .btn-container {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
+	flex-wrap: nowrap;
 }
 .page-btn {
 	width: 2rem;
@@ -349,6 +350,29 @@ section.loading-circle {
 	.btn-container {
 		margin: 0 auto;
 		max-width: 700px;
+	}
+}
+
+/*tablet landscape and desktop layout (960px or more) */
+@media only screen and (min-width: 960px) {
+	/*...tablet landscape and desktop styles */
+}
+
+/*table portrait layout (768px to 959px) */
+@media only screen and (max-width: 959px) {
+	/*... tablet portrait styles */
+}
+
+/*mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+	/*...mobile landscape styles */
+}
+
+/*mobile portrait layout (479px or less) */
+@media only screen and (max-width: 420px) {
+	/*...mobile portrait styles */
+	.btn-container {
+		font-size: 0.5rem;
 	}
 }
 
@@ -532,15 +556,6 @@ section.loading-circle {
 /*=============================================
           keyframe lds-circle
 ================================================*/
-.lds-circle {
-	display: inline-block;
-	width: 64px;
-	height: 64px;
-	margin: 8px;
-	border-radius: 50%;
-	background: #fff;
-	animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
 @keyframes lds-circle {
 	0%,
 	100% {
