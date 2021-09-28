@@ -140,6 +140,32 @@ small,
 	color: white;
 	background-color: #282c34;
 }
+
+/*tablet landscape and desktop layout (960px or more) */
+@media only screen and (min-width: 960px) {
+	/*...tablet landscape and desktop styles */
+}
+
+/*table portrait layout (768px to 959px) */
+@media only screen and (max-width: 959px) {
+	/*... tablet portrait styles */
+}
+
+/*mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+	/*...mobile landscape styles */
+	html {
+		font-size: 75%;
+	}
+}
+
+/*mobile portrait layout (479px or less) */
+@media only screen and (max-width: 320px) {
+	/*...mobile portrait styles */
+  html {
+    font-size: 62.5%;
+  }
+}
 /*=============================================
           keyframe
 ================================================*/
