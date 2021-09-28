@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './../img/logo.svg';
-import SpinningCircles from 'react-loading-icons';
 import { useFetch } from './../utils/useFetch';
-import paginate from './../utils/util';
 import Follower from './../components/Follower';
 
 function App() {
@@ -15,6 +13,7 @@ function App() {
 	useEffect(() => {
 		if (loading) return;
 		setFollowers(data[page]);
+
 	}, [loading, page, data]);
 
 	const nextPage = () => {
@@ -40,23 +39,6 @@ function App() {
 		setPage(index);
 	};
 
-	// if (loading) {
-	// 	return (
-	// 		<div className='loading'>
-	// 			<SpinningCircles
-	// 				height='8em'
-	// 				width='8em'
-	// 				fill='#003e6b'
-	// 				stroke='#003e6b'
-	// 				speed={1}
-	// 				fillOpacity={1}
-	// 				strokeWidth={2}
-	// 				strokeOpacity={0.725}
-	// 			/>
-	// 			<h4 className='loading-text'> L o a d i n g . . .</h4>
-	// 		</div>
-	// 	);
-	// }
 	return (
 		<main className='app'>
 			<header className='app-header'>
@@ -64,11 +46,12 @@ function App() {
 				<h1>ReactJS Pagination</h1>
 			</header>
 			<section className='followers'>
+				{ loading ? <div className='loading'><section className='loading-circle'></section></div> :
 				<div className='container'>
-					{followers.map(follower => {
+					{ followers.map(follower => {
 						return <Follower key={follower.id} {...follower} />;
 					})}
-				</div>
+				</div>}
 				{!loading && (
 					<div className='btn-container'>
 						<button className='prev-btn' onClick={prevPage}>

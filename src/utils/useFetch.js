@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import paginate from './util';
-const url = 'https://api.github.com/users/john-smilga/followers?per_page=120';
+const url = 'https://api.github.com/users/john-smilga/followers?per_page=96';
 
 export const useFetch = () => {
 	const [loading, setLoading] = useState(true);
