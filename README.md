@@ -9,3 +9,5 @@ First install node_modules folder
 
 Then to start app in browser at http://localhost:3000
 ### `npm start or yarn start`
+
+![reactjs-pagination](https://user-images.githubusercontent.com/20928980/135232768-13d684a7-3da8-457f-8ae7-8f26b839d219.png)
